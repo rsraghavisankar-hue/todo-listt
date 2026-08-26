@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasks — To-Do</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <header class="app-header">
+    <h1>Tasks</h1>
+    <p class="count" id="taskCount">0 open</p>
+  </header>
+
+  <form id="taskForm" class="task-form">
+    <input type="text" id="taskInput" placeholder="Add a task..." autocomplete="off" maxlength="120">
+    <button type="submit" aria-label="Add task">+</button>
+  </form>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="active">Active</button>
+    <button class="filter-btn" data-filter="completed">Completed</button>
+  </div>
+
+  <ul class="task-list" id="taskList"></ul>
+
+  <p class="empty-state" id="emptyState">Nothing here yet. Add your first task above.</p>
+
+  <footer class="app-footer">
+    <button id="clearCompleted" class="clear-btn">Clear completed</button>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
